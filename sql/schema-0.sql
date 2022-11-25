@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_2factor` tinyint(1) NOT NULL DEFAULT '1',
   `user_2factor_scode` varchar(255) COLLATE utf8_unicode_ci NULL,
    `user_2factor_paired` tinyint(1) NOT NULL DEFAULT '0',
-  `user_start_date` date NOT NULL,
-  `user_end_date` date NOT NULL,
+  `user_start_date` date NULL,
+  `user_end_date` date NULL,
   PRIMARY KEY (`user_id`),
   KEY `user_pass` (`user_pass`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
