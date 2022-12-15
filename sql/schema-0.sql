@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `admin_id` varchar(255) NOT NULL,
   `admin_pass` varchar(255) NOT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `log` (
   `log_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `log` (
   `log_send` float NOT NULL DEFAULT '0',
   PRIMARY KEY (`log_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
@@ -35,4 +35,4 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_end_date` date NULL,
   PRIMARY KEY (`user_id`),
   KEY `user_pass` (`user_pass`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
